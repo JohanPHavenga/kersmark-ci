@@ -6,6 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $content = parse_ini_file("site_data.ini", true);
+        return view('home');
     }
 }
