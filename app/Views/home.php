@@ -89,6 +89,11 @@
                                         <div>Contact</div>
                                     </a>
                                 </li>
+                                <li class="menu-item">
+                                    <a class="button button-3d button-rounded button-dirtygreen" style="padding: 8px 15px;" href="<?= base_url($lang_switch); ?>" class="menu-link">
+                                        <div><?= strtoupper($lang_switch); ?></div>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                         <!-- #primary-menu end -->
@@ -140,10 +145,10 @@
                             Consumers or cash.
                         </p>
 
-                        <p class="bottommargin" style="font-size: 16px">
+                        <!-- <p class="bottommargin" style="font-size: 16px">
                             <a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Vendor Application
                                 <i class="icon-angle-right"></i></a>
-                        </p>
+                        </p> -->
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -160,7 +165,7 @@
                                     data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'
                                 ></div> -->
                             <div class="gmap h-100">
-                                <iframe frameborder="0" style="border: 0; height: 100%" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAf9RjGBfasEEV3Dg8YVkBpVA1VgmebarU&q=Uitsig+Gemeente+NG+Kerk" allowfullscreen>
+                                <iframe frameborder="0" style="border: 0; height: 100%" src="https://www.google.com/maps/embed/v1/place?key=<?=$google_api;?>" allowfullscreen>
                                 </iframe>
                             </div>
                         </div>
@@ -205,48 +210,46 @@
                                 ">
                             Vendor Application
                         </h2>
-                        <div class="row">
-                            <div class="row col-mb-50">
-                                <h3>Step 1: Vendor Information</h3>
+                        <div class="col-mb-50">
+                            <h3>Step 1: Vendor Information</h3>
+                            <div class="col-md-12">
+                                <div class="accordion accordion-border clearfix" data-state="closed">
+                                    <?php
+                                    foreach ($content['vendor_info'] as $acc_header => $acc_content) {
+                                    ?>
+                                        <div class="accordion-header">
+                                            <div class="accordion-icon">
+                                                <i class="accordion-closed icon-ok-circle"></i>
+                                                <i class="accordion-open icon-remove-circle"></i>
+                                            </div>
+                                            <div class="accordion-title">
+                                                <?= str_replace("_", " ", $acc_header); ?>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-content" style="display: none">
+                                            <?= $acc_content; ?>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-12">
-                                    <div class="accordion accordion-border clearfix" data-state="closed">
-                                        <?php
-                                        foreach ($content['vendor_info'] as $acc_header => $acc_content) {
-                                        ?>
-                                            <div class="accordion-header">
-                                                <div class="accordion-icon">
-                                                    <i class="accordion-closed icon-ok-circle"></i>
-                                                    <i class="accordion-open icon-remove-circle"></i>
-                                                </div>
-                                                <div class="accordion-title">
-                                                    <?= str_replace("_", " ", $acc_header); ?>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-content" style="display: none">
-                                                <?= $acc_content; ?>
-                                            </div>
-                                        <?php
-                                        }
-                                        ?>
-                                    </div>
+                                    <h3>Step 2: Complete Application Form</h3>
+                                    <p>Please be sure to complete and save the Excel Product list prior to completing the vendors application.
+                                        This is important as the product list must be attached in the application with your photos.</p>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>Step 2: Complete Application Form</h3>
-                                        <p>Please be sure to complete and save the Excel Product list prior to completing the vendors application.
-                                            This is important as the product list must be attached in the application with your photos.</p>
-                                    </div>
+                                <div class="col-md-12">
+                                    <a href="PRODUKTELYS.xlsx" class="button button-desc button-3d button-rounded button-blue center">Product List
+                                        <span>Download Excel Form</span></a>
 
-                                    <div class="col-md-12">
-                                        <a href="PRODUKTELYS.xlsx" class="button button-desc button-3d button-rounded button-blue center">Product List
-                                            <span>Download Excel Form</span></a>
-
-                                        <a href="https://forms.gle/euD8mZJUAxP1K2x4A" class="button button-desc button-3d button-rounded button-default center">Vendor Appliction<span>Sign-up to become a
-                                                vendor</span></a>
-                                    </div>
-
+                                    <a href="https://forms.gle/euD8mZJUAxP1K2x4A" class="button button-desc button-3d button-rounded button-default center">Vendor Appliction<span>Sign-up to become a
+                                            vendor</span></a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
