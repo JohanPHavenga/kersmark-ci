@@ -15,7 +15,7 @@ class Home extends BaseController
             $data['lang_switch']="af";
         }
         $data['content'] = parse_ini_file("./".$file_to_parse, true);
-        wts($data,1);
+        // wts($data,1);
         return view('home', $data);
     }
 }

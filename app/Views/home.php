@@ -76,17 +76,17 @@
                             <ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
                                 <li class="menu-item">
                                     <a href="#" class="menu-link" data-href="#wrapper">
-                                        <div>Home</div>
+                                        <div><?= $content['menu']['Home']; ?></div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#" class="menu-link" data-href="#section-vendor">
-                                        <div>Vendor Application</div>
+                                        <div><?= $content['menu']['Vendor_Application']; ?></div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#" class="menu-link" data-href="#section-contact">
-                                        <div>Contact</div>
+                                        <div><?= $content['menu']['Contact']; ?></div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
@@ -114,7 +114,7 @@
                             <img src="images/Uitsig_Kersmark.jpg" alt="Uitsig Kersmark" />
                         </p>
                         <h1 class="font-weight-bold font-body opm-medium-word" style="line-height: 1.3em">
-                            Uitsig Kersmark
+                            <?= $content['heading']['H1']; ?>
                         </h1>
 
                         <h2 class="mx-auto bottommargin font-body" style="
@@ -122,28 +122,12 @@
                                     font-size: 40px;
                                     line-height: 1.2em;
                                 ">
-                            21&nbsp;November - 9&nbsp;December&nbsp;2022<br />
-                            <span style="font-size: 0.8em;font-weight: normal;">Mon to Fri 10:00-19:00<br />
-                                Sat 09:00-16:00</span>
+                            <?= $content['heading']['Date']; ?><br />
+                            <span style="font-size: 0.8em;font-weight: normal;"><?= $content['heading']['Time']; ?></span>
                         </h2>
 
-                        <p class="lead mx-auto" style="max-width: 800px">
-                            Welcome to our 22nd Market! Our market is unique
-                            because it is friendly atmosphere & mainly
-                            handcrafted products from local
-                            entrepreneurs!<br />
-                            Entrance is free of charge to our relaxed and
-                            welcoming venue that is wheelchair friendly.
-                            Visitors will be treated to a good variety of
-                            exhibitors and delicious food & treats at our
-                            pop-up restaurant.
-                        </p>
-                        <p class="lead mx-auto bottommargin" style="max-width: 800px">
-                            There is a central payment point with several
-                            cash registers at the exit. The public can pay
-                            by credit card, debit card, Snapscan, Cape
-                            Consumers or cash.
-                        </p>
+                        <p class="lead mx-auto" style="max-width: 800px"><?= $content['heading']['Intro1']; ?></p>
+                        <p class="lead mx-auto bottommargin" style="max-width: 800px"><?= $content['heading']['Intro2']; ?></p>
 
                         <!-- <p class="bottommargin" style="font-size: 16px">
                             <a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Vendor Application
@@ -156,44 +140,32 @@
                 <div id="section-contact" class="page-section pt-0" style="padding-bottom: 0">
                     <div class="row mx-0 bottommargin-lg align-items-stretch">
                         <div class="col-lg-8 col-md-6 px-0">
-                            <!-- <div
-                                    class="gmap h-100"
-                                    data-address="Melbourne, Australia"
-                                    data-maptype="ROADMAP"
-                                    data-zoom="14"
-                                    data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "images/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]'
-                                    data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'
-                                ></div> -->
                             <div class="gmap h-100">
-                                <iframe frameborder="0" style="border: 0; height: 100%" src="https://www.google.com/maps/embed/v1/place?key=<?=$google_api;?>" allowfullscreen>
+                                <iframe frameborder="0" style="border: 0; height: 100%" src="https://www.google.com/maps/embed/v1/place?key=<?= $google_api; ?>" allowfullscreen>
                                 </iframe>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6" style="background-color: #f5f5f5">
                             <div class="col-padding">
                                 <h3 class="font-body font-weight-normal ls1">
-                                    Contact Info
+                                    <?= $content['contact']['Heading']; ?>
                                 </h3>
 
                                 <div style="
                                             font-size: 16px;
                                             line-height: 1.7;
                                         ">
-                                    <address style="line-height: 1.7">
-                                        <strong>NG Church
-                                            Bellville-Uitsig</strong><br />
-                                        c/o Mountainview Drive and
-                                        Ridgeworth Drive<br />
-                                        Ridgeworth<br />
-                                        Bellville
-                                    </address>
+                                    <address style="line-height: 1.7"><?= $content['contact']['Address']; ?></address>
 
                                     <div class="clear topmargin-sm"></div>
 
-                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr>
-                                    +27 (0)21 919 4220<br />
-                                    <abbr title="Email Address"><strong>Email:</strong></abbr>
-                                    <a href="mailto:kersmark@uitsigkerk.co.za">kersmark@uitsigkerk.co.za</a>
+                                    <abbr title="<?= $content['contact']['Phone_title']; ?>"><strong><?= $content['contact']['Phone_text']; ?>:</strong></abbr>
+                                    <a href="tel:+27219194220">+27 (0)21 919 4220</a><br />
+                                    <abbr title="<?= $content['contact']['Email_title']; ?>"><strong><?= $content['contact']['Email_text']; ?>:</strong></abbr>                                    
+                                    <?php
+                                    $attributes = ['title' => 'Website Contact'];
+                                    echo safe_mailto('kersmark@uitsigkerk.co.za', 'kersmark@uitsigkerk.co.za', $attributes);
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -203,19 +175,18 @@
                 <!-- SECTION: VENDOR-->
                 <div id="section-vendor" class="page-section pt-0">
                     <div class="container clearfix">
-                        <h2 class="mx-auto bottommargin font-body center" style="
-                                    max-width: 700px;
-                                    font-size: 40px;
-                                    line-height: 1.2em;
-                                ">
-                            Vendor Application
+                        <h2 class="mx-auto bottommargin font-body center" style="max-width: 700px; font-size: 40px; line-height: 1.2em;">
+                            <?= $content['vendor']['Heading']; ?>
                         </h2>
                         <div class="col-mb-50">
-                            <h3>Step 1: Vendor Information</h3>
+                            <h3><?= $content['vendor_step1']['Heading']; ?></h3>
                             <div class="col-md-12">
                                 <div class="accordion accordion-border clearfix" data-state="closed">
                                     <?php
-                                    foreach ($content['vendor_info'] as $acc_header => $acc_content) {
+                                    foreach ($content['vendor_step1'] as $key => $step) {
+                                        if (!is_array($step)) {
+                                            continue;
+                                        }
                                     ?>
                                         <div class="accordion-header">
                                             <div class="accordion-icon">
@@ -223,11 +194,11 @@
                                                 <i class="accordion-open icon-remove-circle"></i>
                                             </div>
                                             <div class="accordion-title">
-                                                <?= str_replace("_", " ", $acc_header); ?>
+                                                <?= $step['heading']; ?>
                                             </div>
                                         </div>
                                         <div class="accordion-content" style="display: none">
-                                            <?= $acc_content; ?>
+                                            <?= $step['text']; ?>
                                         </div>
                                     <?php
                                     }
@@ -237,17 +208,14 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3>Step 2: Complete Application Form</h3>
-                                    <p>Please be sure to complete and save the Excel Product list prior to completing the vendors application.
-                                        This is important as the product list must be attached in the application with your photos.</p>
+                                    <h3><?= $content['vendor_step2']['Heading']; ?></h3>
+                                    <p><?= $content['vendor_step2']['Text']; ?></p>
                                 </div>
 
                                 <div class="col-md-12">
-                                    <a href="PRODUKTELYS.xlsx" class="button button-desc button-3d button-rounded button-blue center">Product List
-                                        <span>Download Excel Form</span></a>
+                                    <a href="PRODUKTELYS.xlsx" class="button button-desc button-3d button-rounded button-blue center"><?= $content['vendor_step2']['Button_Product_List']; ?></a>
 
-                                    <a href="https://forms.gle/euD8mZJUAxP1K2x4A" class="button button-desc button-3d button-rounded button-default center">Vendor Appliction<span>Sign-up to become a
-                                            vendor</span></a>
+                                    <a href="https://forms.gle/euD8mZJUAxP1K2x4A" class="button button-desc button-3d button-rounded button-default center"><?= $content['vendor_step2']['Button_Vendor_App']; ?></a>
                                 </div>
 
                             </div>
