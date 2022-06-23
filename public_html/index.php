@@ -23,8 +23,8 @@ chdir(__DIR__);
 // This is the line that might need to be changed, depending on your folder structure.
 // kry FTP username
 $parts=explode("/",FCPATH);
-// $pathsConfig = FCPATH . '../app/Config/Paths.php';  <---- hierdie werk nie by Xneelo nie
-$pathsConfig="/usr/home/".$parts[4]."/app/Config/Paths.php";
+$pathsConfig = FCPATH . '../app/Config/Paths.php';
+// $pathsConfig="/usr/home/".$parts[4]."/app/Config/Paths.php";
 // ^^^ Change this if you move your application folder
 
 
