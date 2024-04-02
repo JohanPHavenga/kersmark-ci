@@ -209,13 +209,12 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h3><?= $content['vendor_step2']['Heading']; ?></h3>
-                                    <p><?= $content['vendor_step2']['Text']; ?></p>
                                 </div>
 
                                 <div class="col-md-12">
                                     <!-- <a href="PRODUKTELYS.xlsx" class="button button-desc button-3d button-rounded button-blue center"><?= $content['vendor_step2']['Button_Product_List']; ?></a> -->
 
-                                    <!-- <a href="https://forms.gle/PafqiFCY7LdAKRPM8" class="button button-desc button-3d button-rounded button-default center"><?= $content['vendor_step2']['Button_Vendor_App']; ?></a> -->
+                                    <a href="https://forms.gle/zux2ibppCzAtwyQV6" class="button button-desc button-3d button-rounded button-default center"><?= $content['vendor_step2']['Button_Vendor_App']; ?></a>
                                 </div>
 
                             </div>
